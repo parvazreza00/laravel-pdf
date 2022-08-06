@@ -36,8 +36,8 @@
                 @endforeach
             </tbody>
         </table>
-        <div class="d-flex justify-content-start mb-4">
-            <a class="btn btn-primary" href="{{ URL::to('/employee/pdf') }}">Download PDF</a>
+        <div class="d-flex justify-content-center mb-4">
+            <a class="btn btn-success" href="{{ URL::to('/employee/pdf') }}">Download PDF</a>
         </div>
     </div>
 
