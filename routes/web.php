@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,11 @@ use App\Http\Controllers\EmployeeController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/', [EmployeeController::class, 'showEmployees']);
-Route::get('/employee/pdf',[EmployeeController::class, 'createFDF']);
+// Route::get('/', [EmployeeController::class, 'showEmployees']);
+// Route::get('/employee/pdf',[EmployeeController::class, 'createFDF']);
+//Route::get('/', [UserController::class, 'generatePDFshow']);
+Route:: get('/generate-pdf' ,[UserController::class, 'generatePDF']);
