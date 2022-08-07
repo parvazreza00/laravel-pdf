@@ -22,4 +22,6 @@ Route::get('/', function () {
 // Route::get('/', [EmployeeController::class, 'showEmployees']);
 // Route::get('/employee/pdf',[EmployeeController::class, 'createFDF']);
 //Route::get('/', [UserController::class, 'generatePDFshow']);
-Route:: get('/generate-pdf' ,[UserController::class, 'generatePDF']);
+//Route:: get('/generate-pdf' ,[UserController::class, 'generatePDF']);
+
+//Route::get('/',[UserController::class, 'userInformation']);

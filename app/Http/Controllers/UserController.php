@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use PDF;
+use Illuminate\Support\Facades\DB;
+
 
 class UserController extends Controller
 {
@@ -28,4 +30,21 @@ class UserController extends Controller
     
 
 }
+
+    public function userInformation(){
+        $users = DB::table('users')->select('id','name', 'email',)->get();
+
+        $table = "<table border='1' border-collapse='collapse' width='300'";
+
+        $table.="<tr><th>Id</th><th>Name</th><th>Email</th></tr>";
+        foreach($users as $user){
+            $table.="<tr><td>$user->id</td><td>$user->name</td><td>$user->email</td></tr>";
+        }
+        $table.="</table>";
+        echo $table;
+        
+    }
+
+
+
 }
